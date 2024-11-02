@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffe6e6"
+    tools:context=".RegistrationActivity1">
+
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/step_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
+        app:sv_animationDuration="1"
+        app:sv_animationType="Line"
+        app:sv_doneCircleColor="@color/edit"
+        app:sv_doneCircleRadius="20dp"
+        app:sv_doneStepLineColor="@color/edit"
+        app:sv_doneStepMarkColor="@android:color/white"
+        app:sv_doneTextColor="@android:color/darker_gray"
+        app:sv_nextStepLineColor="@color/black"
+        app:sv_nextTextColor="@color/black"
+        app:sv_selectedCircleColor="@color/edit"
+        app:sv_selectedCircleRadius="12dp"
+        app:sv_selectedStepNumberColor="@color/edit"
+        app:sv_selectedTextColor="@color/black"
+        app:sv_stepLineWidth="2dp"
+        app:sv_stepNumberTextSize="12sp"
+        app:sv_stepPadding="4dp"
+        app:sv_stepViewStyle="@style/StepView"
+        app:sv_steps="@array/details"
+        app:sv_stepsNumber="4"
+        app:sv_textSize="12sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llbtns"
+        android:layout_below="@+id/step_view"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="11dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/personaldetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/viewImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/baseline_person_24"
+                       />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tName"
+                    style="@style/textFields"
+                    android:text="First Name" />
+
+                <EditText
+                    android:id="@+id/enterName"
+                    style="@style/editTexts"
+                    android:background="@drawable/edittext_border"
+                    android:hint="Enter First Name"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/tMiddleName"
+                    style="@style/textFields"
+                    android:text="Middle Name" />
+
+                <EditText
+                    android:id="@+id/middleName"
+                    style="@style/editTexts"
+                    android:background="@drawable/edittext_border"
+                    android:hint="Enter Middle Name"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/tLastName"
+                    style="@style/textFields"
+                    android:text="Last_name" />
+
+                <EditText
+                    android:id="@+id/lastName"
+                    style="@style/editTexts"
+                    android:background="@drawable/edittext_border"
+                    android:hint="  Enter Last Name"
+                    android:inputType="text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:id="@+id/tbirthDate"
+                            style="@style/textFields2"
+                            android:text="Date of Birth" />
+
+                        <EditText
+                            android:id="@+id/birthDate"
+                            style="@style/editTexts2"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/edittext_border"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="Enter Date of Birth" />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tgender"
+                            style="@style/textFields2"
+                            android:text="Gender"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinnerList"
+                            android:layout_width="175dp"
+                            android:layout_height="49dp"
+                            android:layout_marginLeft="15sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/spinner_background"
+                            android:defaultFocusHighlightEnabled="true"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/taadharNum"
+                    style="@style/textFields"
+                    android:text="Aadhar Number"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/aadharNum"
+                    style="@style/editTexts"
+                    android:background="@drawable/edittext_border"
+                    android:hint="Enter Aadhar Number"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/educationInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tSchool"
+                    style="@style/textFields"
+                    android:text="School/Collage Name" />
+
+                <EditText
+                    android:id="@+id/schoolName"
+                    style="@style/editTexts"
+                    android:background="@drawable/edittext_border"
+                    android:hint="Enter School/Collage Name"
+                    android:inputType="text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/tCourse"
+                            style="@style/textFields2"
+                            android:text="Course Name" />
+
+                        <Spinner
+                            android:id="@+id/courseName"
+                            android:layout_width="175dp"
+                            android:layout_height="49dp"
+                            android:layout_marginLeft="15sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/spinner_background"
+                            android:defaultFocusHighlightEnabled="true"
+                            android:textSize="20sp"
+                            android:hint="Enter Course Name" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tRollNo"
+                            style="@style/textFields2"
+                            android:text="Roll No." />
+
+                        <EditText
+                            android:id="@+id/rollNo"
+                            style="@style/editTexts2"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Enter Roll No."
+                            android:inputType="text|number"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/tCourseTenure"
+                            style="@style/textFields2"
+                            android:text="Course Tenure" />
+
+                        <Spinner
+                            android:id="@+id/courseTenure"
+                            style="@style/editTexts2"
+                            android:layout_width="175dp"
+                            android:layout_height="49dp"
+                            android:layout_marginLeft="15sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/spinner_background"
+                            android:defaultFocusHighlightEnabled="true"
+                            android:textSize="20sp"
+                            android:hint="Enter Course Duration" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tAdmitDate"
+                            style="@style/textFields2"
+                            android:layout_height="wrap_content"
+                            android:text="Year of Admission" />
+
+                        <Spinner
+                            android:id="@+id/admitDate"
+                            style="@style/editTexts2"
+                            android:layout_width="175dp"
+                            android:layout_height="49dp"
+                            android:layout_marginLeft="15sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/spinner_background"
+                            android:defaultFocusHighlightEnabled="true"
+                            android:textSize="20sp"
+                            android:hint="Enter Admission year" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/tStartDate"
+                            style="@style/textFields2"
+                            android:text="Start Date" />
+
+                        <EditText
+                            android:id="@+id/startDate"
+                            style="@style/editTexts2"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/edittext_border"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="Enter Start Date" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tEndDate"
+                            style="@style/textFields2"
+                            android:text="End Date" />
+
+                        <EditText
+                            android:id="@+id/endDate"
+                            style="@style/editTexts2"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/edittext_border"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="Enter End Date" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tDepot"
+                        style="@style/textFields"
+                        android:text="Depot Name" />
+
+                    <Spinner
+                        android:id="@+id/depotName"
+                        style="@style/editTexts"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/spinner_background"
+                        android:defaultFocusHighlightEnabled="true"
+                        android:textSize="20sp"
+                        android:hint="Enter Depot Name" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/tStartPoint"
+                            style="@style/textFields2"
+                            android:layout_height="wrap_content"
+                            android:text="Start Point" />
+
+                        <Spinner
+                            android:id="@+id/startPoint"
+                            style="@style/editTexts2"
+                            android:layout_width="175dp"
+                            android:layout_height="49dp"
+                            android:layout_marginLeft="15sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/spinner_background"
+                            android:defaultFocusHighlightEnabled="true"
+                            android:textSize="20sp"
+                            android:hint="Enter Start Point" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tEndPoint"
+                            style="@style/textFields2"
+                            android:text="End Point" />
+
+                        <Spinner
+                            android:id="@+id/endPoint"
+                            style="@style/editTexts2"
+                            android:layout_width="175dp"
+                            android:layout_height="49dp"
+                            android:layout_marginLeft="15sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/spinner_background"
+                            android:defaultFocusHighlightEnabled="true"
+                            android:textSize="20sp"
+                            android:hint="Enter End Point" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tRoute"
+                        style="@style/textFields"
+                        android:text="Via Route" />
+
+                    <Spinner
+                        android:id="@+id/viaRoute"
+                        style="@style/editTexts"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/spinner_background"
+                        android:defaultFocusHighlightEnabled="true"
+                        android:textSize="20sp"
+                        android:hint="Enter Via Route" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/currentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tUnitNo"
+                    style="@style/textFields"
+                    android:text="Unit Number" />
+
+                <EditText
+                    android:id="@+id/unitNo"
+                    style="@style/editTexts"
+                    android:background="@drawable/edittext_border"
+                    android:hint="Enter Unit Number"
+                    android:inputType="text|number"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/tBuldng"
+                            style="@style/textFields2"
+                            android:layout_height="wrap_content"
+                            android:text="Building Name" />
+
+                        <EditText
+                            android:id="@+id/buldngName"
+                            style="@style/editTexts2"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Enter Building Name" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tStreet"
+                            style="@style/textFields2"
+                            android:text="Street Name" />
+
+                        <EditText
+                            android:id="@+id/street"
+                            style="@style/editTexts2"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Enter Street Name" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/tCity"
+                            style="@style/textFields2"
+                            android:layout_height="wrap_content"
+                            android:text="City" />
+
+                        <EditText
+                            android:id="@+id/cityN"
+                            style="@style/editTexts2"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Enter City Name" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tDist"
+                            style="@style/textFields2"
+                            android:text="District" />
+
+                        <EditText
+                            android:id="@+id/distr"
+                            style="@style/editTexts2"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Enter District Name" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/tState"
+                            style="@style/textFields2"
+                            android:layout_height="wrap_content"
+                            android:text="State" />
+
+                        <EditText
+                            android:id="@+id/state"
+                            style="@style/editTexts2"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Enter Start Name" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tPin"
+                            style="@style/textFields2"
+                            android:text="Pin Code" />
+
+                        <EditText
+                            android:id="@+id/pinCode"
+                            style="@style/editTexts2"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Enter Pin Code"
+                            android:inputType="number"
+                            android:digits="0123456789"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/createAccJCTSL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tfPhoneNum"
+                        style="@style/textFields"
+                        android:text="Contact Number" />
+
+                    <EditText
+                        android:id="@+id/tPhoneNum"
+                        style="@style/editTexts"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Enter Contact Number"
+                        android:inputType="phone"
+                        android:digits="0123456789"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tEmail"
+                    style="@style/textFields"
+                    android:text="E-Mail ID" />
+
+                <EditText
+                    android:id="@+id/eMail"
+                    android:hint="Enter e-mail"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/edittext_border"
+                    android:paddingLeft="15dp"
+                    android:textSize="17dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tPassword"
+                        style="@style/textFields"
+                        android:text="Password"
+                        />
+
+                    <EditText
+                        android:id="@+id/passwords"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Enter Password"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/black"
+                        android:paddingLeft="15dp"
+                        android:textSize="17dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tOtp"
+                            style="@style/textFields2"
+                            android:text="OTP Number"
+                            />
+
+                        <EditText
+                            android:id="@+id/otpNum"
+                            style="@style/editTexts2"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Enter OTP"
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tSendOtp"
+                            style="@style/textFields2"
+                            android:text="CLICK SEND OTP"
+
+                            />
+
+
+                        <Button
+                            android:id="@+id/sendOtp"
+                            android:layout_width="180dp"
+                            android:layout_height="49dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Send OTP"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/displayData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llbtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="BACK"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnnext"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:text="NEXT"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

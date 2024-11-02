@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Student  Registration Form</string>
+
+    <array name="details">
+        <item>Personal</item>
+        <item>Education</item>
+        <item>Current Address</item>
+        <item>JCTSL Account</item>
+    </array>
+
+    <string name="select_course">Select Course</string>
+    <string-array name="course_array">
+        <item>Select Course</item>
+        <item>Math</item>
+        <item>Science</item>
+        <item>English</item>
+        <item>Art</item>
+        <item>History</item>
+    </string-array>
+    <string name="course_Tenure">Select Course Tenure</string>
+    <string-array name="tenure_array">
+        <item>Select Course Tenure</item>
+        <item>2 years</item>
+        <item>3 years</item>
+        <item>4 years</item>
+        <item>5 years</item>
+        <item>6 years</item>
+    </string-array>
+    <string name="admit_Year">Select Admission Year</string>
+    <string-array name="admitYrs_array">
+        <item>Select Admission Year</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+    </string-array>
+    <string name="depot_names">Select Depot</string>
+    <string-array name="depot_array">
+        <item>Select Depot</item>
+        <item>Jaipur</item>
+        <item>Udaipur</item>
+        <item>Jaisalmer</item>
+    </string-array>
+
+    <string name="start_Point">Select Starting Point Bus stop</string>
+    <string-array name="startPnt_array">
+        <item>Select Start Point</item>
+        <item>Ajmeri Gate</item>
+        <item>Ajmer</item>
+        <item>Airport</item>
+        <item>Alka</item>
+        <item>Amer</item>
+        <item>Chaksu</item>
+        <item>Chinkara</item>
+    </string-array>
+
+    <string name="end_Point">Select Ending Point Bus stop</string>
+    <string-array name="endPnt_array">
+        <item>Select End point</item>
+        <item>Ajmeri Gate</item>
+        <item>Ajmer</item>
+        <item>Airport</item>
+        <item>Alka</item>
+        <item>Amer</item>
+        <item>Chaksu</item>
+        <item>Chinkara</item>
+    </string-array>
+
+    <string name="via_Rout">Select via route</string>
+    <string-array name="viaRoute_array">
+        <item>Select Via Route</item>
+        <item>Ajmeri Gate</item>
+        <item>Ajmer</item>
+        <item>Airport</item>
+        <item>Alka</item>
+        <item>Amer</item>
+        <item>Chaksu</item>
+        <item>Chinkara</item>
+    </string-array>
+
+
+</resources>
